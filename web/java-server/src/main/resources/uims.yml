@@ -1,0 +1,116 @@
+uims:
+  menu:
+    - name: student
+      title: 学生管理
+    - name: course
+      title: 课程管理
+  page:
+    - name: student
+      type: table
+      title: 学生管理
+      showAdd: 1
+      item:
+        - type: text
+          prop: studentNum
+          label: 学号
+        - type: text
+          prop: studentName
+          label: 姓名
+        - type: text
+          prop: sex
+          label: 性别
+        - type: text
+          prop: age
+          label: 年龄
+        - type: text
+          prop: birthday
+          label: 出生日期
+        - type: text
+          prop: grade
+          label: 绩点
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+            - name: detail
+            - name: course
+              label: 课程管理
+      query:
+        - type: input
+          prop: numName
+          label: 请输入学号或姓名
+          #_____________________________________________
+    - name: studentEdit
+      type: form
+      title: 学生信息
+      item:
+        - type: input
+          prop: studentNum
+          label: 学号
+        - type: input
+          prop: studentName
+          label: 姓名
+        - type: select
+          prop: sex
+          label: 性别
+          option:
+            - value: 1
+              label: 男
+            - value: 2
+              label: 女
+        - type: input
+          prop: age
+          label: 年龄
+        - type: date
+          prop: birthday
+          label: 出生日期
+        - type: input
+          prop: grade
+          label: 绩点
+          #________________________________________________________
+          #________________________________________________________
+
+    - name: course
+      type: table
+      title: 课程管理
+      showAdd: 1
+      item:
+        - type: text
+          prop: courseNum
+          label: 课程号
+        - type: text
+          prop: courseName
+          label: 课程名
+        - type: text
+          prop: textbook
+          label: 教材
+        - type: text
+          prop: courseCredit
+          label: 学分
+        - type: opers
+          label: 操作
+          opers:
+            - name: edit
+            - name: delete
+      query:
+        - type: input
+          prop: courseNumName
+          label: 请输入课程名或课程号
+          #________________________________________________________
+    - name: courseEdit
+      type: form
+      title: 课程信息
+      item:
+        - type: input
+          prop: courseNum
+          label: 课程号
+        - type: input
+          prop: courseName
+          label: 课程名
+        - type: input
+          prop: textbook
+          label: 教材
+        - type: input
+          prop: courseCredit
+          label: 学分
